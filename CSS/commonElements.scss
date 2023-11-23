@@ -1,0 +1,19 @@
+$white-color: #ffffff;
+$darkgrey-color: #0b0b0b;
+$black-color: #000000;
+$red-color: #b20000;
+$font-family-text: 'Inter', sans-serif;
+// $font-family-title: ;
+
+body {
+    font-family: $font-family-text;
+    margin: 0;
+}
+
+.footer {
+    background-color: $darkgrey-color;
+    color: $white-color;
+}
+
+
+

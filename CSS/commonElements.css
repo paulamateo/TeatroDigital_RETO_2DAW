@@ -3,6 +3,9 @@ body {
     margin: 0;
 }
 
+
+
+/*FOOTER*/
 .footer {
     background-color: #0b0b0b;
     color: #ffffff;
@@ -14,7 +17,7 @@ body {
     text-align: center;
     justify-content: space-between;
     margin: 10px 20px; 
-    padding: 10px;
+    padding: 25px;
     box-sizing: border-box;
 }
 
@@ -22,6 +25,11 @@ body {
     list-style: none;
     padding-inline-start: 0;
     font-size: 12px;
+    font-weight: 600;
+}
+
+.footer__icon {
+    margin: 0 0 0 5px;
 }
 
 .footer__menu-item a {
@@ -30,7 +38,52 @@ body {
 }
 
 .footer__copyright {
-    font-size: 10px;
+    font-size: 9px;
     line-height: 2px;
     text-align: right;
+}
+
+/*ULTIMAS INCORPORACIONES*/
+.section-shows__rectangle {
+    background-color: #b20000;
+    text-align: center;
+    color: #ffffff;
+    font-weight: 300;
+    padding: 10px;
+}
+
+.section-shows__grid {
+    margin: 50px;
+    color: #ffffff;
+    font-weight: 400;
+}
+
+.grid-item__button {
+    all: unset;
+    background-color: #b20000;
+    color: #ffffff;
+    padding: 15px;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+.grid-item {
+    background-image: url(../IMÁGENES/popup-obra3.jpg);
+    color: #ffffff;
+    text-align: center;
+}
+
+
+
+
+@media screen and (min-width: 768px) {
+    /*FOOTER*/
+    .footer__menu--inline-block {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .footer__menu-item {
+        margin: 0 30px;
+    }
 }
