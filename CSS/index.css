@@ -1,0 +1,97 @@
+/*ULTIMAS INCORPORACIONES*/
+.section-shows__rectangle {
+    background-color: #b20000;
+    text-align: center;
+    color: #ffffff;
+    font-weight: 300;
+    padding: 20px;
+}
+
+.section-shows__grid {
+    margin: 50px;
+    color: #ffffff;
+    font-weight: 400;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 400px);
+    grid-gap: 30px;
+}
+
+.grid-item__button {
+    all: unset;
+    background-color: #b20000;
+    color: #ffffff;
+    padding: 15px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-top: 15px;
+}
+
+.grid-item {
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-size: cover;
+    background-position: center;
+}
+
+.grid-item--image-1 {
+    background-image: url(../IMÁGENES/popup-obra5.jpg);
+}
+
+.grid-item--image-2 {
+    background-image: url(../IMÁGENES/popup-obra8.jpg);
+}
+
+.grid-item--image-3 {
+    background-image: url(../IMÁGENES/popup-obra6.jpg);
+}
+
+
+/*BANNER PRINCIPAL*/
+.hero-banner {
+    background-image: url(../IMÁGENES/banner_homepage.png);
+    background-size: cover; 
+    background-position: center; 
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.hero-banner__content {
+    text-align: center;
+    color: #ffffff;
+    
+}
+
+.hero-banner__content h1 {
+    margin: 0;
+}
+
+/*RESEÑAS*/
+.second-banner {
+    background-image: url(../IMÁGENES/banner_homepage_2.jpg);
+    background-size: cover; 
+    background-position: center; 
+    color: #ffffff;
+    height: 50vh;
+}
+
+.second-banner p, h2 {
+    margin: 0;
+}
+
+
+@media screen and (min-width: 800px) {
+    /*ULTIMAS INCORPORACIONES*/
+    .section-shows__grid--columns {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 400px;
+        grid-gap: 30px;
+    }
+}
