@@ -1,5 +1,5 @@
 /*ULTIMAS INCORPORACIONES*/
-.section-shows__rectangle {
+.shows__rectangle {
     background-color: #b20000;
     text-align: center;
     color: #ffffff;
@@ -7,7 +7,7 @@
     padding: 20px;
 }
 
-.section-shows__grid {
+.shows__grid {
     margin: 50px;
     color: #ffffff;
     font-weight: 400;
@@ -38,16 +38,20 @@
     background-position: center;
 }
 
+.grid-item:hover {
+    transform: scale(1.08);
+}
+
 .grid-item--image-1 {
-    background-image: url(../IMÁGENES/popup-obra5.jpg);
+    background-image: url(../IMÁGENES/homepage_show1.jpg);
 }
 
 .grid-item--image-2 {
-    background-image: url(../IMÁGENES/popup-obra8.jpg);
+    background-image: url(../IMÁGENES/homepage_show2.jpg);
 }
 
 .grid-item--image-3 {
-    background-image: url(../IMÁGENES/popup-obra6.jpg);
+    background-image: url(../IMÁGENES/homepage_show3.jpg);
 }
 
 
@@ -89,7 +93,7 @@
 
 @media screen and (min-width: 800px) {
     /*ULTIMAS INCORPORACIONES*/
-    .section-shows__grid--columns {
+    .shows__grid--columns {
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: 400px;
         grid-gap: 30px;
