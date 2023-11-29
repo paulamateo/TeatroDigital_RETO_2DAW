@@ -3,6 +3,36 @@ body {
     margin: 0;
 }
 
+/*HEADER*/
+.header {
+    background-color: #0b0b0b;
+    color: #ffffff;
+    padding: 10px;
+}
+
+.header__content {
+    display: flex;
+    align-items: center;
+    margin: 10px;
+}
+
+.header__logo {
+    justify-content: center;
+    
+}
+
+.logo {
+    width: 120px;
+    cursor: pointer;
+    justify-content: center;
+}
+
+.list-icon {
+    cursor: pointer;
+    margin-right: auto;
+}
+
+
 /*FOOTER*/
 .footer {
     background-color: #0b0b0b;
@@ -61,5 +91,10 @@ body {
         display: flex;
         align-items: center;
         justify-content: space-between;
+    }
+
+    /*HEADER*/
+    .list-icon {
+        display: none;
     }
 }
