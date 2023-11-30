@@ -7,7 +7,8 @@ body {
 .header {
     background-color: #0b0b0b;
     color: #ffffff;
-    padding: 10px;
+    padding: 8px;
+    font-size: 14px;
     position: fixed;
     width: 100%;
     box-sizing: border-box;
@@ -39,9 +40,9 @@ body {
     margin-right: 10px; */
 }
 
-/* .menu {
-    display: none;
-} */
+.menu {
+   display: none;
+}
 
 
 /*MENU*/
@@ -50,7 +51,7 @@ body {
     color: white;
     position: absolute;
     left: 0;
-    top: 100px;
+    top: 95px;
     padding: 10px;
     text-align: center;
     opacity: 0;
@@ -90,7 +91,11 @@ input {
     font-family: 'Inter', sans-serif;
     background-color: #353535;
     margin-bottom: 10px;
-    text-indent: 30px;
+    text-indent: 40px;
+}
+
+.search--visibility {
+    display: none;
 }
 
 .loupe {
@@ -167,12 +172,32 @@ input {
     }
 
     /*HEADER*/
+    .header__content--navbar {
+        justify-content: flex-start;
+    }
+
+    .search--visibility {
+        display: block;
+        justify-content: flex-end;
+    }
+
+    input {
+        margin-bottom: 0;
+    }
+
+
+    .logo--size {
+        width: 150px;
+        margin: 0 0 0 30px;
+    }
+
     .list-icon {
         display: none;
     }
 
     .menu {
         display: block;
+        margin: 0 0 0 70px;
     }
 
     .menu ul {
@@ -184,14 +209,13 @@ input {
         text-decoration: none;
         color: inherit;
         font-weight: 600;
-        margin-left: 10px;
+        margin: 0 0 0 10px;
     }
 
     .menu li {
         display: flex;
-        margin-right: 50px;
+        margin: 0 50px 0 0;
         align-items: center;
     }
 
-    /*POPUP HEADER*/
 }
