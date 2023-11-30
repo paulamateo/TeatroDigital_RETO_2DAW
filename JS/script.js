@@ -11,3 +11,12 @@ document.addEventListener('scroll', function() {
         logoImage.src = '../IMÁGENES/logo_negro.png';
     }
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    var hamburgerIcon = document.getElementById('list-icon');
+    var headerPopup = document.getElementById('header__popup');
+
+    hamburgerIcon.addEventListener('click', function() {
+        headerPopup.classList.toggle('active');
+    });
+});
