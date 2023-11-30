@@ -1,165 +1,20 @@
-body {
-    font-family: Arial, sans-serif;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-  }
-
-  .container {
-    text-align: center;
-  }
-
-  .asientos_escenario {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .seating-area {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: #0B0B0B;
-    padding: 20px;
-    max-width: 100%;
-  }
-
-  .row {
-    display: flex;
-    justify-content: space-between;
-  }
-
-  .seat {
-    width: 7px;
-    height: 7px;
-    margin: 1.5px;
-    background-color: #37B02C;
-    border: 1px solid #37B02C;
-    cursor: pointer;
-    border-radius: 100%;
-  }
-
-  .seat.selected {
-    background-color: blue;
-    border: 1px solid blue;
-  }
-
-  .seat.reserved {
-    background-color: #e74c3c;
-    border: 1px solid #e74c3c;
-    cursor: not-allowed;
-  }
-
-  .seat:not(.reserved):hover {
-    background-color: white;
-    border: 1px solid white;
-  }
-
-  .aisle {
-    width: 7px;
-    height: 7px;
-    margin: 1.5px;
-    visibility: hidden;
-  }
-
-  .stage {
-    display: flex;
-    width: 550px;
-    height: 70px;
-    background-color: #0B0B0B;
-    margin: 20px auto;
-    color: white;
-    align-items: center;
-    font-size: 13px;
-    justify-content: center;
-  }
-
-  .Leyenda {
-    display: flex;
-    justify-content: flex-end;
-    width: 100%;
-    margin-bottom: 15px;
-  }
-
-  .Leyenda ul {
-    font-size: 12px;
-    display: flex;
-    list-style: none;
-    padding: 0;
-    margin-right: 40px;
-  }
-
-  .Leyenda li {
-    display: flex;
-    margin-left: 15px;
-    align-items: center;
-  }
-
-  .button {
-    all: unset;
-    position: absolute;
-    top: 15px;
-    left: 15px;
-    background-color: #b20000;
-    color: #ffffff;
-    padding: 10px;
-    border-radius: 30px;
-    font-size: 10px;
-    margin-top: 15px;
-    align-items: center;
-    display: flex;
-    height:15px;
-    width: 65px;
-    justify-content: center;
-  }
-
-  .circler {
-    width: 10px;
-    height: 10px;
-    margin: 1.5px;
-    background-color: #E20404;
-    border: 1px solid #E20404;
-    border-radius: 100%;
-    margin-right:10px;
-
-
-  }
-
-  .circleg {
-    width: 10px;
-    height: 10px;
-    margin: 1.5px;
-    background-color: #37B02C;
-    border: 1px solid #37B02C;
-    border-radius: 100%;
-    margin-right:10px;
-
-  }
-
-  @media (min-width: 769px) {
-    .seat {
-      width: 18px;
-      height: 18px;
-      margin: 2px;
-    }
-
-    .aisle {
-      width: 18px;
-      height: 18px;
-      margin: 3px;
-    }
-
-    .stage {
-      width: 1150px;
-      height: 125px;
-      margin: 20px;
-      font-size: 27px;
+ body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
     }
 
     .container {
-      margin-left: 20px;
+      text-align: center;
+    }
+
+    .asientos_escenario {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
 
     .seating-area {
@@ -168,31 +23,176 @@ body {
       align-items: center;
       background-color: #0B0B0B;
       padding: 20px;
-      width: 1000px;
-      max-width: none;
+      max-width: 100%;
+    }
+
+    .row {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .seat {
+      width: 7px;
+      height: 7px;
+      margin: 1.5px;
+      background-color: #37B02C;
+      border: 1px solid #37B02C;
+      cursor: pointer;
+      border-radius: 100%;
+    }
+
+    .seat.selected {
+      background-color: blue;
+      border: 1px solid blue;
+    }
+
+    .seat.reserved {
+      background-color: #e74c3c;
+      border: 1px solid #e74c3c;
+      cursor: not-allowed;
+    }
+
+    .seat:not(.reserved):hover {
+      background-color: white;
+      border: 1px solid white;
+    }
+
+    .aisle {
+      width: 7px;
+      height: 7px;
+      margin: 1.5px;
+      visibility: hidden;
+    }
+
+    .stage {
+      display: flex;
+      width: 550px;
+      height: 100px;
+      background-color: #0B0B0B;
+      margin: 20px auto;
+      color: white;
+      align-items: center;
+      font-size: 13px;
+      justify-content: center;
+    }
+
+    .Leyenda {
+      display: flex;
+      justify-content: flex-end;
+      width: 100%;
+      margin-bottom: 15px;
     }
 
     .Leyenda ul {
-      font-size: 20px;
-      margin-right: 80px;
+      font-size: 12px;
+      display: flex;
+      list-style: none;
+      padding: 0;
+      margin-right: 40px;
+    }
 
+    .Leyenda li {
+      display: flex;
+      margin-left: 15px;
+      align-items: center;
     }
 
     .button {
-      font-size: 12px;
-      width: 80px;
-      height: 22px;
-      justify-content: center;
+      all: unset;
+      position: absolute;
+      top: 15px;
+      left: 15px;
+      background-color: #b20000;
+      color: #ffffff;
+      padding: 10px;
+      border-radius: 30px;
+      font-size: 10px;
+      margin-top: 15px;
+      align-items: center;
       display: flex;
-      
+      height:15px;
+      width: 65px;
+      justify-content: center;
+    }
+
+    .circler {
+      width: 10px;
+      height: 10px;
+      margin: 1.5px;
+      background-color: #E20404;
+      border: 1px solid #E20404;
+      border-radius: 100%;
+      margin-right:10px;
+
 
     }
-    .circler{
-      width:15px;
-      height: 15px;
+
+    .circleg {
+      width: 10px;
+      height: 10px;
+      margin: 1.5px;
+      background-color: #37B02C;
+      border: 1px solid #37B02C;
+      border-radius: 100%;
+      margin-right:10px;
+
     }
-    .circleg{
-      width:15px;
-      height: 15px;
+
+    @media (min-width: 769px) {
+      .seat {
+        width: 18px;
+        height: 18px;
+        margin: 2px;
+      }
+
+      .aisle {
+        width: 18px;
+        height: 18px;
+        margin: 3px;
+      }
+
+      .stage {
+        width: 1150px;
+        height: 125px;
+        margin: 20px;
+        font-size: 27px;
+      }
+
+      .container {
+        margin-left: 20px;
+      }
+
+      .seating-area {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #0B0B0B;
+        padding: 20px;
+        width: 1000px;
+        max-width: none;
+      }
+
+      .Leyenda ul {
+        font-size: 20px;
+        margin-right: 80px;
+
+      }
+
+      .button {
+        font-size: 12px;
+        width: 80px;
+        height: 22px;
+        justify-content: center;
+        display: flex;
+        
+
+      }
+      .circler{
+        width:15px;
+        height: 15px;
+      }
+      .circleg{
+        width:15px;
+        height: 15px;
+      }
     }
-  }
