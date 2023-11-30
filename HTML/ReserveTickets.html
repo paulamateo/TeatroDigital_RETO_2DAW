@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="../CSS/ReserveTickets.css">
+  <title>Selecciona tus Asientos</title>
+</head>
+
+<body>
+  <button class="button">
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-left"
+      viewBox="0 0 16 16">
+      <path fill-rule="evenodd"
+        d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z" />
+    </svg>
+    VOLVER
+  </button>
+
+  <div class="container">
+    <div class="asientos_escenario">
+      <h2>Selecciona tus Asientos</h2>
+      <div class="Leyenda">
+        <ul>
+          <li>
+            Leyenda:
+          </li>
+          <li>
+            <div class="circleg"></div>
+            Disponible
+          </li>
+          <li>
+            <div class="circler"></div>
+            No Disponible
+          </li>
+        </ul>
+      </div>
+      <div class="seating-area">
+        <div id="seats" class="seats-container"></div>
+      </div>
+      <div class="stage">
+        <p>ESCENARIO</p>
+      </div>
+    </div>
+    <p>Seleccionado: <span id="count">0</span> asientos</p>
+    <p>Total a pagar: $<span id="total">0</span></p>
+  </div>
+
+</body>
+<script src="../JS/ReserveTickets.js"></script>
+</html>
