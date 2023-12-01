@@ -4,7 +4,12 @@
     text-align: center;
     color: #ffffff;
     font-weight: 300;
-    padding: 20px;
+    padding: 25px;
+}
+
+.shows__rectangle h2 {
+    font-family: 'GothamLight' , sans-serif;
+    letter-spacing: 0.15em;
 }
 
 .shows__grid {
@@ -25,7 +30,11 @@
     border-radius: 30px;
     cursor: pointer;
     font-size: 14px;
-    margin-top: 15px;
+    margin-top: 20px;
+}
+
+.grid-item__button:hover {
+    background-color: #b0802c;
 }
 
 .grid-item {
@@ -33,31 +42,28 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    text-align: center;
     flex-direction: column;
     background-size: cover;
     background-position: center;
 }
 
-.grid-item:hover {
-    transform: scale(1.08);
-}
-
 .grid-item--image-1 {
-    background-image: url(../IMÁGENES/homepage_show1.jpg);
+    background-image: url(../IMG/homepage_show1.jpg);
 }
 
 .grid-item--image-2 {
-    background-image: url(../IMÁGENES/homepage_show2.jpg);
+    background-image: url(../IMG/homepage_show2.jpg);
 }
 
 .grid-item--image-3 {
-    background-image: url(../IMÁGENES/homepage_show3.jpg);
+    background-image: url(../IMG/homepage_show3.jpg);
 }
 
 
 /*BANNER PRINCIPAL*/
 .hero-banner {
-    background-image: url(../IMÁGENES/banner_homepage.png);
+    background-image: url(../IMG/banner_homepage.png);
     background-size: cover; 
     background-position: center; 
     height: 100vh;
@@ -65,12 +71,49 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    letter-spacing: 0.15em;
+}
+
+.hero-banner h1 {
+    font-size: 280%;
+    font-family: 'GothamBook', sans-serif;
+    font-weight: 400;
+    padding: 0 40px 25px 40px;
+}
+
+.hero-baner__subtitles {
+    font-family: 'GothamLight', sans-serif;
+    margin: 40px 0 0 0;
+    padding: 0 40px 25px 40px;
+}
+
+@font-face {
+    font-family: 'GothamBook';
+    src: url('../FONT/GothamBook.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'GothamLight';
+    src: url('../FONT/GothamLight.ttf') format('truetype');
+}
+
+.hero-banner__line {
+    border: 2px solid white;
+    width: 50px;
+}
+
+
+.chevronleft-icon {
+    cursor: pointer;
+    color: white;
+    position: absolute;
+    bottom: 50px;
+    animation: arrow 2s infinite ;
 }
 
 .hero-banner__content {
     text-align: center;
     color: #ffffff;
-    
 }
 
 .hero-banner__content h1 {
@@ -79,23 +122,80 @@
 
 /*RESEÑAS*/
 .second-banner {
-    background-image: url(../IMÁGENES/banner_homepage_2.jpg);
+    background-image: url(../IMG/banner_homepage_2.jpg);
     background-size: cover; 
     background-position: center; 
     color: #ffffff;
-    height: 50vh;
+    height: 70vh;
+    display: flex;
+    align-items: center;
 }
 
 .second-banner p, h2 {
     margin: 0;
 }
 
+.second-banner__content {
+    width: 55%;
+    margin: 0 0 0 50px;
+    display: flex;
+    flex-direction: column;
+}
 
-@media screen and (min-width: 800px) {
+.second-banner__content h2 {
+    font-family: 'GothamLight', sans-serif;
+    letter-spacing: 0.15em;
+    padding-bottom: 20px;
+}
+
+.grid-item h2 {
+    font-family: 'GothamLight', sans-serif;
+    letter-spacing: 0.15em;
+}
+
+.second-banner__review {
+    margin: 10px 0 10px 0;
+    font-size: 9px;
+}
+
+.grid-item__button--position {
+    margin: 30px 0 0 auto;
+}
+
+/*MAPA*/
+.map {
+    filter: grayscale(100%);
+}
+
+@media screen and (min-width: 990px) {
     /*ULTIMAS INCORPORACIONES*/
     .shows__grid--columns {
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: 400px;
         grid-gap: 30px;
+    }
+
+    /*REVIEWS*/
+    .second-banner__review {
+        font-size: 14px;
+    }
+
+    .second-banner__content {
+        margin: 0 0 0 80px;
+        line-height: 20px;
+    }
+
+    /*BANNER PRINCIPAL*/
+    .hero-baner__subtitles {
+        line-height: 5px;
+    }
+}
+
+@keyframes arrow {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(10px);
     }
 }

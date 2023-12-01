@@ -7,7 +7,7 @@ body {
 .header {
     background-color: #0b0b0b;
     color: #ffffff;
-    padding: 8px;
+    padding: 5px;
     font-size: 14px;
     position: fixed;
     width: 100%;
@@ -16,11 +16,9 @@ body {
 }
 
 .header.scrolled {
-    background-color:white;
-    color:black;
+    background-color: white;
+    color: black;
 }
-
-
 
 .header__content {
     display: flex;
@@ -36,14 +34,11 @@ body {
 
 .list-icon {
     cursor: pointer;
-    /* margin-right: auto;
-    margin-right: 10px; */
 }
 
 .menu {
    display: none;
 }
-
 
 /*MENU*/
 .header__popup {
@@ -51,12 +46,37 @@ body {
     color: white;
     position: absolute;
     left: 0;
-    top: 95px;
+    top: 70px;
     padding: 10px;
     text-align: center;
     opacity: 0;
     transition: opacity 0.3s;
     pointer-events: none;
+}
+
+.header__popup.scrolled {
+    background-color: white;
+    color: black;
+}
+
+.header__popup.scrolled .search__input {
+    background-color: black;
+}
+
+.header__popup.scrolled .loupe {
+    color: white;
+}
+
+.search__input {
+    padding: 10px;
+    border: none; 
+    border-radius: 20px;
+    outline: none; 
+    font-family: 'Inter', sans-serif;
+    background-color: #353535;
+    margin-bottom: 10px;
+    text-indent: 40px;
+    color: white;
 }
 
 .header__popup.active {
@@ -83,16 +103,6 @@ body {
     align-items: center;
 }
 
-input {
-    padding: 10px;
-    border: none; 
-    border-radius: 20px;
-    outline: none; 
-    font-family: 'Inter', sans-serif;
-    background-color: #353535;
-    margin-bottom: 10px;
-    text-indent: 40px;
-}
 
 .search--visibility {
     display: none;
@@ -102,14 +112,12 @@ input {
     position: absolute;
     left: 40px;
     top: 10px;
+    cursor: pointer;
 }
 
 .search {
     position: relative;
 }
-
-
-
 
 /*FOOTER*/
 .footer {
@@ -154,7 +162,7 @@ input {
 }
 
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 990px) {
     /*FOOTER*/
     .footer__menu--inline-block {
         display: flex;
@@ -178,13 +186,18 @@ input {
 
     .search--visibility {
         display: block;
-        justify-content: flex-end;
+        margin: 0 30px 0 auto;
     }
 
-    input {
-        margin-bottom: 0;
+    .search__input {
+        margin: 0;
+        width: 280px;
     }
 
+    .loupe--position {
+        left: 20px;
+        color: white;
+    }
 
     .logo--size {
         width: 150px;
@@ -216,6 +229,11 @@ input {
         display: flex;
         margin: 0 50px 0 0;
         align-items: center;
+    }
+
+    .search__input.scrolled {
+        background-color: #000000;
+        color: white;
     }
 
 }

@@ -1,16 +1,44 @@
 $white-color: #ffffff;
-$darkgrey-color: #0b0b0b;
 $black-color: #000000;
+$darkgrey-color: #0b0b0b;
 $red-color: #b20000;
+$gold-color: #b0802c;
 $font-family-text: 'Inter', sans-serif;
-// $font-family-title: ;
+$font-family-title: 'GothamBook', sans-serif;
+$font-family-subtitle: 'GothamLight', sans-serif;
 
-body {
-    font-family: $font-family-text;
-    margin: 0;
-}
-
-.footer {
+.header {
     background-color: $darkgrey-color;
     color: $white-color;
+    padding: 5px;
+    font-size: 14px;
+    position: fixed;
+    width: 100%;
+    box-sizing: border-box;
+    transition: background-color 0.3s;
+}
+
+.header.scrolled {
+    background-color: $white-color;
+    color: $black-color;
+}
+
+.header__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px;
+}
+
+.logo {
+    width: 120px;
+    cursor: pointer;
+}
+
+.list-icon {
+    cursor: pointer;
+}
+
+.menu {
+    display: none;
 }
