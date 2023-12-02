@@ -3,23 +3,55 @@ body {
     margin: 0;
 }
 
+@font-face {
+    font-family: 'GothamBook';
+    src: url('../FONT/GothamBook.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'GothamLight';
+    src: url('../FONT/GothamLight.ttf') format('truetype');
+}
+
+.button {
+    all: unset;
+    background-color: #b20000;
+    color: #ffffff;
+    padding: 15px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-top: 20px;
+}
+
+.banner {
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 55vh;
+    letter-spacing: 0.15em;
+    width: 100%;
+    font-family: 'GothamLight', sans-serif;
+    font-size: 20px;
+}
+
 /*HEADER*/
 .header {
     background-color: #0b0b0b;
     color: #ffffff;
-    padding: 10px;
-    position: fixed;
+    padding: 5px;
+    font-size: 14px; /*SE HA ELIMINADO LA PROPIEDAD position: fixed*/
     width: 100%;
     box-sizing: border-box;
     transition: background-color 0.3s;
+    z-index: 1;
 }
 
 .header.scrolled {
-    background-color:white;
-    color:black;
+    background-color: white;
+    color: black;
 }
-
-
 
 .header__content {
     display: flex;
@@ -35,55 +67,89 @@ body {
 
 .list-icon {
     cursor: pointer;
-    /* margin-right: auto;
-    margin-right: 10px; */
 }
 
-/* .menu {
-    display: none;
-} */
-
+.menu {
+   display: none;
+}
 
 /*MENU*/
-.menu {
-    background-color: aqua;
+.header__popup {
+    background-color: #0b0b0b;
     color: white;
     position: absolute;
     left: 0;
-    top: 100px;
+    top: 70px;
     padding: 10px;
     text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s;
+    pointer-events: none;
 }
 
-.menu ul {
-    list-style: none;
-    line-height: 30px;
+.header__popup.scrolled {
+    background-color: white;
+    color: black;
 }
 
-.menu a {
-    text-decoration: none;
-    color: inherit;
-    font-weight: 600;
-    margin-left: 10px;
+.header__popup.scrolled .search__input {
+    background-color: black;
 }
 
-.menu li {
-    display: flex;
-    margin-right: 50px;
-    align-items: center;
+.header__popup.scrolled .loupe {
+    color: white;
 }
 
-input {
+.search__input {
     padding: 10px;
     border: none; 
     border-radius: 20px;
     outline: none; 
     font-family: 'Inter', sans-serif;
     background-color: #353535;
+    margin-bottom: 10px;
+    text-indent: 40px;
+    color: white;
 }
 
+.header__popup.active {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
 
+.header__popup ul {
+    list-style: none;
+    line-height: 30px;
+}
 
+.header__popup a {
+    text-decoration: none;
+    color: inherit;
+    font-weight: 600;
+    margin-left: 10px;
+}
+
+.header__popup li {
+    display: flex;
+    margin-right: 50px;
+    align-items: center;
+}
+
+.search--visibility {
+    display: none;
+}
+
+.loupe {
+    position: absolute;
+    left: 40px;
+    top: 10px;
+    cursor: pointer;
+}
+
+.search {
+    position: relative;
+}
 
 /*FOOTER*/
 .footer {
@@ -128,7 +194,7 @@ input {
 }
 
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 990px) {
     /*FOOTER*/
     .footer__menu--inline-block {
         display: flex;
@@ -146,12 +212,37 @@ input {
     }
 
     /*HEADER*/
+    .header__content--navbar {
+        justify-content: flex-start;
+    }
+
+    .search--visibility {
+        display: block;
+        margin: 0 30px 0 auto;
+    }
+
+    .search__input {
+        margin: 0;
+        width: 280px;
+    }
+
+    .loupe--position {
+        left: 20px;
+        color: white;
+    }
+
+    .logo--size {
+        width: 150px;
+        margin: 0 0 0 30px;
+    }
+
     .list-icon {
         display: none;
     }
 
     .menu {
         display: block;
+        margin: 0 0 0 70px;
     }
 
     .menu ul {
@@ -163,13 +254,18 @@ input {
         text-decoration: none;
         color: inherit;
         font-weight: 600;
-        margin-left: 10px;
+        margin: 0 0 0 10px;
     }
 
     .menu li {
         display: flex;
-        margin-right: 50px;
+        margin: 0 50px 0 0;
         align-items: center;
+    }
+
+    .search__input.scrolled {
+        background-color: #000000;
+        color: white;
     }
 
 }
