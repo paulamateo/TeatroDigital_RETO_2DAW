@@ -3,6 +3,39 @@ body {
     margin: 0;
 }
 
+@font-face {
+    font-family: 'GothamBook';
+    src: url('../FONT/GothamBook.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'GothamLight';
+    src: url('../FONT/GothamLight.ttf') format('truetype');
+}
+
+.button {
+    all: unset;
+    background-color: #b20000;
+    color: #ffffff;
+    padding: 15px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-top: 20px;
+}
+
+.banner {
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 55vh;
+    letter-spacing: 0.15em;
+    width: 100%;
+    font-family: 'GothamLight', sans-serif;
+    font-size: 20px;
+}
+
 /*HEADER*/
 .header {
     background-color: #0b0b0b;
@@ -103,7 +136,6 @@ body {
     margin-right: 50px;
     align-items: center;
 }
-
 
 .search--visibility {
     display: none;

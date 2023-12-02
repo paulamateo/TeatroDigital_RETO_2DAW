@@ -22,17 +22,6 @@
     grid-gap: 30px;
 }
 
-.grid-item__button {
-    all: unset;
-    background-color: #b20000;
-    color: #ffffff;
-    padding: 15px;
-    border-radius: 30px;
-    cursor: pointer;
-    font-size: 14px;
-    margin-top: 20px;
-}
-
 .grid-item__button:hover {
     background-color: #b0802c;
 }
@@ -60,7 +49,6 @@
     background-image: url(../IMG/homepage_show3.jpg);
 }
 
-
 /*BANNER PRINCIPAL*/
 .hero-banner {
     background-image: url(../IMG/banner_homepage.png);
@@ -85,16 +73,6 @@
     font-family: 'GothamLight', sans-serif;
     margin: 40px 0 0 0;
     padding: 0 40px 25px 40px;
-}
-
-@font-face {
-    font-family: 'GothamBook';
-    src: url('../FONT/GothamBook.ttf') format('truetype');
-}
-
-@font-face {
-    font-family: 'GothamLight';
-    src: url('../FONT/GothamLight.ttf') format('truetype');
 }
 
 .hero-banner__line {
