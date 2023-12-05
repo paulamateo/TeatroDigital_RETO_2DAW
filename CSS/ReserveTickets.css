@@ -187,3 +187,7 @@ main {
         height: 15px;
       }
     }
+
+    .chevron-left {
+      margin-right: 5px;
+    }
