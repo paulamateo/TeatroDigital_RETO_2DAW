@@ -1,0 +1,21 @@
+.icon-arrow {
+    text-align: left;
+    cursor: pointer;
+    color: white;
+}
+
+.popup__mobile {
+    background-color: aquamarine;
+    z-index: 1;
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+}
+
+.popup__content__mobile {
+    margin: 20px;
+}
+
+.popup__img {
+    width: 60%;
+}
