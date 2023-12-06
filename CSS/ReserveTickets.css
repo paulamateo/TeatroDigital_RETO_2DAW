@@ -1,8 +1,9 @@
 main {
   margin: 40px;
 }
+
 .container {
-    text-align: center;
+  text-align: center;
 }
 
 .asientos_escenario {
@@ -70,22 +71,22 @@ main {
   justify-content: center;
 }
 
-.Leyenda {
+.key {
   display: flex;
   justify-content: flex-end;
   width: 100%;
   margin-bottom: 15px;
 }
 
-.Leyenda ul {
-  font-size: 12px;
+.key ul {
+  font-size: 14px;
   display: flex;
   list-style: none;
   padding: 0;
   margin-right: 40px;
 }
 
-.Leyenda li {
+.key li {
   display: flex;
   margin-left: 15px;
   align-items: center;
@@ -93,21 +94,15 @@ main {
 
 .button {
   all: unset;
-  /* position: absolute; */
-  top: 50px;
-  left: 15px;
   background-color: #b20000;
   color: #ffffff;
   padding: 15px;
   border-radius: 30px;
+  cursor: pointer;
   font-size: 14px;
-  margin-top: 15px;
-  align-items: center;
+  margin-top: 20px;
   display: flex;
-  height:15px;
-  width: 65px;
-  justify-content: center;
-  z-index: 2;
+  align-items: center;
 }
 
 .circler {
@@ -130,7 +125,11 @@ main {
   margin-right:10px;
 }
 
-@media (min-width: 769px) {
+.chevron-left {
+  margin-right: 5px;
+}
+
+@media (min-width: 1000px) {
   .seat {
     width: 18px;
     height: 18px;
@@ -144,14 +143,9 @@ main {
   }
 
   .stage {
-    width: 1150px;
+    width: 1100px; /*1150*/
     height: 125px;
     margin: 20px;
-    font-size: 27px;
-  }
-
-  .container {
-    margin-left: 20px;
   }
 
   .seating-area {
@@ -160,34 +154,22 @@ main {
     align-items: center;
     background-color: #0B0B0B;
     padding: 20px;
-    width: 1000px;
+    width: 900px; /*1000*/
     max-width: none;
   }
 
-      .Leyenda ul {
-        font-size: 20px;
-        margin-right: 80px;
+  .key ul {
+    font-size: 14px; /*20*/
+    margin-right: 80px;
+  }
 
-      }
+  .circler{
+    width:15px;
+    height: 15px;
+  }
 
-      .button {
-        width: 80px;
-        height: 22px;
-        justify-content: center;
-        display: flex;
-        
-
-      }
-      .circler{
-        width:15px;
-        height: 15px;
-      }
-      .circleg{
-        width:15px;
-        height: 15px;
-      }
+  .circleg{
+    width:15px;
+    height: 15px;
     }
-
-    .chevron-left {
-      margin-right: 5px;
-    }
+  }

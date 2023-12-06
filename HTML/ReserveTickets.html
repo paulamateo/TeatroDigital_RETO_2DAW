@@ -7,6 +7,7 @@
   <link rel="icon" href="../IMÁGENES/favicon.png" type="image/png">
   <link rel="stylesheet" href="../CSS/commonElements.css">
   <link rel="stylesheet" href="../CSS/reserveTickets.css">
+  <link rel="stylesheet" href="../CSS/paymentpanel.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
@@ -83,65 +84,114 @@
         viewBox="0 0 16 16"><path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z" />
       </svg>VOLVER
     </button>
+
+    <div class="container-tickets">
+      <div class="container">
+        <div class="asientos_escenario">
+          <h2>Selecciona tus asientos</h2>
+          <div class="key">
+            <ul>
+              <li>
+                Leyenda:
+              </li>
+              <li>
+                <div class="circleg"></div>
+                Disponible
+              </li>
+              <li>
+                <div class="circler"></div>
+                No Disponible
+              </li>
+            </ul>
+          </div>
+          <div class="seating-area">
+            <div id="seats" class="seats-container"></div>
+          </div>
+          <div class="stage">
+            <p>ESCENARIO</p>
+          </div>
+        </div>
+        <!-- <p>Seleccionado: <span id="count">0</span> asientos</p>
+        <p>Total a pagar: $<span id="total">0</span></p> -->
+      </div>
   
-    <div class="container">
-      <div class="asientos_escenario">
-        <h2>Selecciona tus Asientos</h2>
-        <div class="Leyenda">
-          <ul>
-            <li>
-              Leyenda:
-            </li>
-            <li>
-              <div class="circleg"></div>
-              Disponible
-            </li>
-            <li>
-              <div class="circler"></div>
-              No Disponible
-            </li>
-          </ul>
+      <div class="payment__panel">
+        <div class="panel">
+          <h3>OBRA: "El Fantasma de la Ópera"</h3>
+          <div class="panel__img">
+            <img src="../IMÁGENES/poster-obra1.jpg"/>
+          </div>
+          <div class="ticket">
+            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" class="trash-icon" viewBox="0 0 16 16">
+              <path d="M6.5 1h3a.5.5 0 0 1 .5.5v1H6v-1a.5.5 0 0 1 .5-.5M11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3A1.5 1.5 0 0 0 5 1.5v1H2.506a.58.58 0 0 0-.01 0H1.5a.5.5 0 0 0 0 1h.538l.853 10.66A2 2 0 0 0 4.885 16h6.23a2 2 0 0 0 1.994-1.84l.853-10.66h.538a.5.5 0 0 0 0-1h-.995a.59.59 0 0 0-.01 0zm1.958 1-.846 10.58a1 1 0 0 1-.997.92h-6.23a1 1 0 0 1-.997-.92L3.042 3.5zm-7.487 1a.5.5 0 0 1 .528.47l.5 8.5a.5.5 0 0 1-.998.06L5 5.03a.5.5 0 0 1 .47-.53Zm5.058 0a.5.5 0 0 1 .47.53l-.5 8.5a.5.5 0 1 1-.998-.06l.5-8.5a.5.5 0 0 1 .528-.47ZM8 4.5a.5.5 0 0 1 .5.5v8.5a.5.5 0 0 1-1 0V5a.5.5 0 0 1 .5-.5"/>
+            </svg>
+            <p><strong>Entrada "Obra título"</strong></h3>
+            <p>Código: XXXXXX</p>
+            <p>Fila: X; Columna: X</p>
+          </div>
+          <hr>
+          <div class="total">
+            <p>Total</p>
+            <p><strong>0,00 €</strong></p>
+          </div>
         </div>
-        <div class="seating-area">
-          <div id="seats" class="seats-container"></div>
-        </div>
-        <div class="stage">
-          <p>ESCENARIO</p>
+  
+        <div class="panel">
+          <h3>DATOS PERSONALES</h3>
+          <div class="panel-box">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="icon-panel" viewBox="0 0 16 16">
+              <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664z"/>
+            </svg>
+            <input type="text" name="name-lastname_input" placeholder="Nombre y apellidos" required>
+          </div>
+          <div class="panel-box">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="icon-panel" viewBox="0 0 16 16">
+              <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1zm13 2.383-4.708 2.825L15 11.105zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741M1 11.105l4.708-2.897L1 5.383z"/>
+            </svg>
+            <input type="text" name="email_input" placeholder="Correo electrónico" required>
+          </div>
+          <div class="panel-box">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="icon-panel" viewBox="0 0 16 16">
+              <path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"/>
+              </svg>
+              <input type="text" name="mobile-phone_input" placeholder="Teléfono" required>
+          </div>
+          <br>
+          <h3>PAGO</h3>
+          <div class="panel-box">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="icon-panel" viewBox="0 0 16 16">
+              <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664z"/>
+            </svg>
+            <input type="text" name="titular_input" placeholder="Titular" required>
+          </div>
+          <div class="panel-box">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="icon-panel" viewBox="0 0 16 16">
+              <path d="M11 5.5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5z"/>
+              <path d="M2 2a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2zm13 2v5H1V4a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1m-1 9H2a1 1 0 0 1-1-1v-1h14v1a1 1 0 0 1-1 1"/>
+            </svg>
+            <input type="text" name="credit-card_input" placeholder="XXXX XXXX XXXX XXXX" required>
+          </div>
+          <div class="panel-box-double">
+            <div class="panel-box">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="icon-panel" viewBox="0 0 16 16">
+                <path d="M11 6.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm-3 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm-5 3a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm3 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5z"/>
+                <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5M1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4z"/>
+              </svg>
+              <input type="text" name="date_input" placeholder="--/--" required>
+            </div>
+            <div class="panel-box">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="icon-panel" viewBox="0 0 16 16">
+                <path d="M8 1a2 2 0 0 1 2 2v4H6V3a2 2 0 0 1 2-2m3 6V3a3 3 0 0 0-6 0v4a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2M5 8h6a1 1 0 0 1 1 1v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1"/>
+              </svg>
+              <input type="text" name="CVV_input" placeholder="***" required>
+            </div>  
+          </div>
+          <div class="button__reservetickets">
+            <button class="button" type="submit">PAGAR</button>
+          </div>
         </div>
       </div>
-      <p>Seleccionado: <span id="count">0</span> asientos</p>
-      <p>Total a pagar: $<span id="total">0</span></p>
     </div>
-
-
-    <div class="payment__panel">
-
-      <div class="panel__tickets">
-        <h3>OBRA "El Fantasma de la Ópera</h3>
-        <img class="panel__img" src="../IMÁGENES/poster-obra1.jpg"/>
-        <div class="ticket">
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="trash-icon" viewBox="0 0 16 16">
-            <path d="M6.5 1h3a.5.5 0 0 1 .5.5v1H6v-1a.5.5 0 0 1 .5-.5M11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3A1.5 1.5 0 0 0 5 1.5v1H2.506a.58.58 0 0 0-.01 0H1.5a.5.5 0 0 0 0 1h.538l.853 10.66A2 2 0 0 0 4.885 16h6.23a2 2 0 0 0 1.994-1.84l.853-10.66h.538a.5.5 0 0 0 0-1h-.995a.59.59 0 0 0-.01 0zm1.958 1-.846 10.58a1 1 0 0 1-.997.92h-6.23a1 1 0 0 1-.997-.92L3.042 3.5zm-7.487 1a.5.5 0 0 1 .528.47l.5 8.5a.5.5 0 0 1-.998.06L5 5.03a.5.5 0 0 1 .47-.53Zm5.058 0a.5.5 0 0 1 .47.53l-.5 8.5a.5.5 0 1 1-.998-.06l.5-8.5a.5.5 0 0 1 .528-.47ZM8 4.5a.5.5 0 0 1 .5.5v8.5a.5.5 0 0 1-1 0V5a.5.5 0 0 1 .5-.5"/>
-          </svg>
-          <h3>Entrada "Obra título"</h3>
-          <p>Código: XXXXXX</p>
-          <p>Fila: X; Columna: X</p>
-        </div>
-        <hr>
-        <div class="total">
-          <p>Total</p>
-          <p><strong>Precio</strong></p>
-        </div>
-      </div>
-
-      <div class="panel__payment">
-        <h3>DATOS PERSONALES</h3>
-        <h3>PAGO</h3>
-        <input type="text" name="user_name_input" required>
-        <button class="button" type="submit">PAGAR</button>
-      </div>
-    </div>
-
   </main>
 
   <footer class="footer">
