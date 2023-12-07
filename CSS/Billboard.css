@@ -23,6 +23,7 @@
   overflow: hidden;
   text-align: center;
   height: auto;
+  cursor: pointer;
 }
 
 .container-item img {
@@ -54,7 +55,6 @@
   font-size: 14px;
   margin: 15px 0 0 10px;
 }
-
 
 @media (min-width: 990px) {
   .container-item {

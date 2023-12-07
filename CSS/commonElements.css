@@ -24,6 +24,16 @@ body {
     margin-top: 20px;
 }
 
+
+.button:hover {
+    background-color: #b0802c;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
 .banner {
     color: white;
     display: flex;
@@ -193,7 +203,6 @@ body {
     font-size: 9px;
     text-align: center;
 }
-
 
 @media screen and (min-width: 990px) {
     /*FOOTER*/
