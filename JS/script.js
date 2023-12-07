@@ -32,16 +32,14 @@ document.getElementById('chevronleft-icon').addEventListener('click', function()
     showsSection.scrollIntoView({ behavior: 'smooth' });
 });
 
-document.getElementById('close-popup').addEventListener('click', function() {
-    var popup = document.getElementById('popup');
-    var overlay = document.getElementById('overlay');
-    popup.classList.remove('active');
-    overlay.classList.remove('active');
+document.querySelectorAll('button').forEach(button => {
+    button.addEventListener('click', () => {
+        document.getElementById('popup').classList.add('active');
+        document.getElementById('overlay').classList.add('active');
+    });
 });
 
-document.getElementById('open-popup').addEventListener('click', function() {
-    var popup = document.getElementById('popup');
-    var overlay = document.getElementById('overlay');
-    overlay.classList.add('active');
-    popup.classList.add('active');
+document.getElementById('close-popup').addEventListener('click', () => {
+    document.getElementById('popup').classList.remove('active');
+    document.getElementById('overlay').classList.remove('active');
 });
