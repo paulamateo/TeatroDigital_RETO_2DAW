@@ -31,3 +31,17 @@ document.getElementById('chevronleft-icon').addEventListener('click', function()
     var showsSection = document.querySelector('.shows');
     showsSection.scrollIntoView({ behavior: 'smooth' });
 });
+
+document.getElementById('close-popup').addEventListener('click', function() {
+    var popup = document.getElementById('popup');
+    var overlay = document.getElementById('overlay');
+    popup.classList.remove('active');
+    overlay.classList.remove('active');
+});
+
+document.getElementById('open-popup').addEventListener('click', function() {
+    var popup = document.getElementById('popup');
+    var overlay = document.getElementById('overlay');
+    overlay.classList.add('active');
+    popup.classList.add('active');
+});
