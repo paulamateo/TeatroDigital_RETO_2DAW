@@ -44,7 +44,7 @@ $background-color: #0b0b0b;
   
     &-item {
         position: relative;
-        width: calc(50% - 10px);
+        width: 100%;
         margin: 0 0 20px 0;
         background-color: $secondary-color;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -60,7 +60,13 @@ $background-color: #0b0b0b;
         }
     }
   
-    @media (min-width: 990px) {
+    @media (min-width: 600px) {
+        &-item {
+            width: calc(50% - 10px);
+        }
+    }
+
+    @media (min-width: 1140px) {
         &-item {
             width: calc(25% - 10px);
         }

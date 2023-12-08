@@ -38,7 +38,7 @@
 }
 .container-item {
   position: relative;
-  width: calc(50% - 10px);
+  width: 100%;
   margin: 0 0 20px 0;
   background-color: white;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -52,7 +52,12 @@
   height: 350px;
   object-fit: cover;
 }
-@media (min-width: 990px) {
+@media (min-width: 600px) {
+  .container-item {
+    width: calc(50% - 10px);
+  }
+}
+@media (min-width: 1140px) {
   .container-item {
     width: calc(25% - 10px);
   }
