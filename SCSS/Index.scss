@@ -30,6 +30,10 @@ $font-weight-title: 400;
     grid-gap: 30px;
 }
 
+.button--index {
+    margin: 0;
+}
+
 .grid-item {
     color: $font-color;
     display: flex;

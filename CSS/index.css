@@ -20,6 +20,10 @@
   grid-gap: 30px;
 }
 
+.button--index {
+  margin: 0;
+}
+
 .grid-item {
   color: white;
   display: flex;
