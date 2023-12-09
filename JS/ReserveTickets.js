@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const selectedSeatsCount = selectedSeats.length;
 
       count.innerText = selectedSeatsCount;
-      total.innerText = selectedSeatsCount * 10; // Precio por asiento
+      total.innerText = selectedSeatsCount * 10;
     }
   });
 
