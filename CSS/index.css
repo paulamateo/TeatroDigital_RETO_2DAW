@@ -20,6 +20,10 @@
   grid-gap: 30px;
 }
 
+.button--index {
+  margin: 0;
+}
+
 .grid-item {
   color: white;
   display: flex;
@@ -49,9 +53,6 @@
 .grid-item__button--position {
   margin: 30px 0 0 auto;
 }
-
-
-
 
 .hero-banner {
   background-image: url(../IMG/banner_homepage.png);

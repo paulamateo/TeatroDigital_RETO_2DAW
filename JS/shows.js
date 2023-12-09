@@ -61,7 +61,7 @@ function createShowElement(show) {
 
     showsContainer.appendChild(showItem);
 
-    showsContainer.appendChild(showItem);
+
 }
 
 shows.forEach(createShowElement);
