@@ -19,6 +19,7 @@ body {
   border-radius: 30px;
   cursor: pointer;
   font-size: 14px;
+  margin-top: 10px;
 }
 .button:hover {
   background-color: #b0802c;
