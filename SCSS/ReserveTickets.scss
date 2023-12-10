@@ -10,10 +10,14 @@ $font-color: black;
 $circle-desktop: 15px;
 $circle-mobile: 10px;
 $seat-desktop: 18px;
-$seat-mobile: 7px;
 
 main {
     margin: 40px;
+}
+
+h2 {
+    margin-top: 30px;
+    margin-bottom: 10px;
 }
 
 .container {
@@ -31,7 +35,7 @@ main {
     flex-direction: column;
     align-items: center;
     background-color: $background-color;
-    padding: 20px;
+    padding: 15px;
     max-width: 100%;
 }
   
@@ -41,8 +45,8 @@ main {
 }
 
 .seat {
-    width: $seat-mobile;
-    height: $seat-mobile;
+    width: 4px;
+    height: 4px;
     margin: 1.5px;
     background-color: $seat-color;
     border: 1px solid $seat-color;
@@ -65,17 +69,10 @@ main {
         border: 1px solid $secondary-color;
     }
 }
-
-.aisle {
-    width: $seat-mobile;
-    height: $seat-mobile;
-    margin: 1.5px;
-    visibility: hidden;
-}
   
 .stage {
     display: flex;
-    width: 550px;
+    width: 200px;
     height: 100px;
     background-color: $background-color;
     margin: 20px auto;
@@ -87,23 +84,31 @@ main {
 
 .key {
     display: flex;
-    justify-content: flex-end;
-    width: 100%;
-    margin-bottom: 15px;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+}
 
-    ul {
-        font-size: 14px;
-        display: flex;
-        list-style: none;
-        padding: 0;
-        margin-right: 40px;
-    }
-
-    li {
-        display: flex;
-        margin-left: 15px;
-        align-items: center;
-    }
+.availability {
+    display: flex;
+    align-items: center;
+}
+  
+.circle {
+    border-radius: 50%;
+    width: 7px;
+    height: 7px;
+    margin: 0 10px 0 10px;
+}
+  
+.circle--disponible {
+    background-color: #37b02c;
+    border: 1px solid #37b02c;
+}
+  
+.circle--no-disponible {
+    background-color: #b20000;
+    border: 1px solid #b20000;
 }
 
 .button--reserve {
@@ -166,7 +171,7 @@ main {
     justify-content: right;
 }
 
-input {
+.input-payment-panel {
     width: calc(100% - 20px);
     border: none;
     background-color: $secondary-color;
@@ -292,7 +297,11 @@ input {
     }
 }
 
-@media (min-width: 1000px) {
+@media (min-width: 950px) {
+    .key p {
+        font-size: 13px;
+    }
+
     .seat {
         width: $seat-desktop;
         height: $seat-desktop;
@@ -321,11 +330,7 @@ input {
         max-width: none;
     }
   
-    .key ul {
-        font-size: 14px;
-        margin-right: 80px;
-    }
-  
+
     .circler, .circleg {
         width: $circle-desktop;
         height: $circle-desktop;

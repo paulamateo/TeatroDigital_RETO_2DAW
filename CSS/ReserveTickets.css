@@ -2,6 +2,11 @@ main {
   margin: 40px;
 }
 
+h2 {
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
 .container {
   text-align: center;
 }
@@ -17,7 +22,7 @@ main {
   flex-direction: column;
   align-items: center;
   background-color: #0b0b0b;
-  padding: 20px;
+  padding: 15px;
   max-width: 100%;
 }
 
@@ -27,8 +32,8 @@ main {
 }
 
 .seat {
-  width: 7px;
-  height: 7px;
+  width: 4px;
+  height: 4px;
   margin: 1.5px;
   background-color: #37b02c;
   border: 1px solid #37b02c;
@@ -49,16 +54,9 @@ main {
   border: 1px solid white;
 }
 
-.aisle {
-  width: 7px;
-  height: 7px;
-  margin: 1.5px;
-  visibility: hidden;
-}
-
 .stage {
   display: flex;
-  width: 550px;
+  width: 200px;
   height: 100px;
   background-color: #0b0b0b;
   margin: 20px auto;
@@ -70,21 +68,31 @@ main {
 
 .key {
   display: flex;
-  justify-content: flex-end;
-  width: 100%;
-  margin-bottom: 15px;
-}
-.key ul {
-  font-size: 14px;
-  display: flex;
-  list-style: none;
-  padding: 0;
-  margin-right: 40px;
-}
-.key li {
-  display: flex;
-  margin-left: 15px;
   align-items: center;
+  justify-content: center;
+  font-size: 10px;
+}
+
+.availability {
+  display: flex;
+  align-items: center;
+}
+
+.circle {
+  border-radius: 50%;
+  width: 7px;
+  height: 7px;
+  margin: 0 10px 0 10px;
+}
+
+.circle--disponible {
+  background-color: #37b02c;
+  border: 1px solid #37b02c;
+}
+
+.circle--no-disponible {
+  background-color: #b20000;
+  border: 1px solid #b20000;
 }
 
 .button--reserve {
@@ -146,7 +154,7 @@ main {
   justify-content: right;
 }
 
-input {
+.input-payment-panel {
   width: calc(100% - 20px);
   border: none;
   background-color: white;
@@ -157,7 +165,7 @@ input {
   text-indent: 40px;
   outline: none;
 }
-input::placeholder {
+.input-payment-panel::placeholder {
   color: #c3c3c3;
 }
 
@@ -264,7 +272,10 @@ input::placeholder {
     gap: 50px;
   }
 }
-@media (min-width: 1000px) {
+@media (min-width: 950px) {
+  .key p {
+    font-size: 13px;
+  }
   .seat {
     width: 18px;
     height: 18px;
@@ -288,10 +299,6 @@ input::placeholder {
     padding: 20px;
     width: 900px;
     max-width: none;
-  }
-  .key ul {
-    font-size: 14px;
-    margin-right: 80px;
   }
   .circler, .circleg {
     width: 15px;
